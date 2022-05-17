@@ -34,7 +34,7 @@ var myLineChart = new Chart(ctx, {
   data: {
     labels: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"],
     datasets: [{
-      label: "Antes",
+      label: "Datos originales",
       data: [72, 73, 75, 76, 69, 70, 76, 75, 74, 73, 75, 76],
       lineTension: 0.3,
       backgroundColor: "rgba(231, 74, 59, 0.2)",
@@ -50,7 +50,7 @@ var myLineChart = new Chart(ctx, {
       
     },
     {
-      label: "Después",
+      label: "Datos procesados",
       data: [85, 86, 88, 88, 85, 83, 89, 88, 83, 84, 86, 88],
       lineTension: 0.3,
       backgroundColor: 'rgba(28, 200, 138, 0.2)',

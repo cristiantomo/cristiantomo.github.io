@@ -34,7 +34,7 @@ var myBarChart = new Chart(ctx, {
   data: {
     labels: ["Exactitud", "Completitud", "Consistencia"],
     datasets: [{
-      label: "Antes",
+      label: "Datos originales",
       data: [85, 90, 70],
       fill: true,
       backgroundColor: 'rgba(231, 74, 59, 0.7)',
@@ -44,7 +44,7 @@ var myBarChart = new Chart(ctx, {
       pointHoverBackgroundColor: '#fff',
       pointHoverBorderColor: 'rgb(231, 74, 59)'
     },{
-      label: "Despues",
+      label: "Datos procesados",
       data: [92,96,88],
       fill: true,
       backgroundColor: 'rgba(28, 200, 138, 0.7)',
