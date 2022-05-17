@@ -81,7 +81,7 @@ var myBarChart = new Chart(ctx, {
       }],
       yAxes: [{
         ticks: {
-          min: 0,
+          min: 60,
           max: 100,
           maxTicksLimit: 5,
           padding: 10,

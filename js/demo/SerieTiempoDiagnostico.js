@@ -32,7 +32,7 @@ var ctx = document.getElementById("SerieTiempoDiagnostico");
 var myLineChart = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    labels: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"],
     datasets: [{
       label: "Antes",
       data: [82, 83, 85, 86, 79, 80, 86, 85, 84, 83, 85, 86],
