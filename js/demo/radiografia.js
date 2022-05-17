@@ -28,7 +28,7 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 }
 
 // Bar Chart Example
-var ctx = document.getElementById("RadiografiaDiagnostico");
+var ctx = document.getElementById("radiografia");
 var myBarChart = new Chart(ctx, {
   type: 'bar',
   data: {
@@ -37,22 +37,22 @@ var myBarChart = new Chart(ctx, {
       label: "Antes",
       data: [85, 90, 70],
       fill: true,
-      backgroundColor: 'rgba(231, 74, 59, 0.7)',
-      borderColor: 'rgb(231, 74, 59)',
-      pointBackgroundColor: 'rgb(231, 74, 59)',
+      backgroundColor: 'rgba(54, 162, 235, 0.7)',
+      borderColor: 'rgb(54, 162, 235)',
+      pointBackgroundColor: 'rgb(54, 162, 235)',
       pointBorderColor: '#fff',
       pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgb(231, 74, 59)'
+      pointHoverBorderColor: 'rgb(54, 162, 235)'
     },{
       label: "Despues",
       data: [92,96,88],
       fill: true,
-      backgroundColor: 'rgba(28, 200, 138, 0.7)',
+      backgroundColor: 'rgba(255, 99, 132, 0.7)',
       borderColor: 'rgb(255, 99, 132)',
-      pointBackgroundColor: 'rgb(28, 200, 138)',
+      pointBackgroundColor: 'rgb(255, 99, 132)',
       pointBorderColor: '#fff',
       pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgb(28, 200, 138)'
+      pointHoverBorderColor: 'rgb(255, 99, 132)'
       }],
   },
   options: {
@@ -81,13 +81,13 @@ var myBarChart = new Chart(ctx, {
       }],
       yAxes: [{
         ticks: {
-          min: 60,
+          min: 0,
           max: 100,
           maxTicksLimit: 5,
           padding: 10,
           // Include a dollar sign in the ticks
           callback: function(value, index, values) {
-            return number_format(value) + '%';
+            return '$' + number_format(value);
           }
         },
         gridLines: {
@@ -100,7 +100,7 @@ var myBarChart = new Chart(ctx, {
       }],
     },
     legend: {
-      display: true
+      display: false
     },
     tooltips: {
       titleMarginBottom: 10,
@@ -117,7 +117,7 @@ var myBarChart = new Chart(ctx, {
       callbacks: {
         label: function(tooltipItem, chart) {
           var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-          return datasetLabel + ': ' + number_format(tooltipItem.yLabel) + '%';
+          return datasetLabel + ': $' + number_format(tooltipItem.yLabel);
         }
       }
     },
