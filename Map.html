@@ -24,10 +24,24 @@
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
     <style>
-        body { margin: 0; padding: 0; }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
         /*#map { position: absolute; top: 0; bottom: 0; width: 100%; }*/
-        #map { position: relative; top: 0; bottom: 0; width: inherit; height: inherit}
-        #map-container { height: 400px; width: 100%; }
+        #map {
+            position: relative;
+            top: 0;
+            bottom: 0;
+            width: inherit;
+            height: inherit
+        }
+
+        #map-container {
+            height: 400px;
+            width: 100%;
+        }
     </style>
 </head>
 
@@ -431,7 +445,7 @@
                                 </div>
                                 <div class="card-body">
                                     <!-- <div class="chart-area" id="map"> -->
-                                        <!-- <canvas id="SerieTiempoDiagnostico"></canvas> -->
+                                    <!-- <canvas id="SerieTiempoDiagnostico"></canvas> -->
                                     <div id="map-container">
                                         <div id="map">
                                             <script>
@@ -440,10 +454,10 @@
                                                 // https://account.mapbox.com
                                                 mapboxgl.accessToken = 'pk.eyJ1IjoiZGFuaWVsZ2lscyIsImEiOiJjazJmaTViamIwNTk5M21waHQyZHJ2bW8yIn0.mk02vckWZRjip_qDxww4sQ';
                                                 var map = new mapboxgl.Map({
-                                                container: 'map', // container ID
-                                                style: 'mapbox://styles/mapbox/streets-v11', // style URL
-                                                center: [-74.0817500, 4], // starting position [lng, lat]
-                                                zoom: 4 // starting zoom
+                                                    container: 'map', // container ID
+                                                    style: 'mapbox://styles/mapbox/streets-v11', // style URL
+                                                    center: [-74.0817500, 4], // starting position [lng, lat]
+                                                    zoom: 4 // starting zoom
                                                 });
 
                                                 map.on('load', () => {
@@ -468,7 +482,7 @@
                                                         'type': 'geojson',
                                                         'data': 'https://cristiantomo.github.io/dpto.geojson'
                                                     });
-                                                    
+
                                                     // Add a layer showing the state polygons.
                                                     map.addLayer({
                                                         'id': 'states-layer',
@@ -511,17 +525,17 @@
                                                     // HTML from the click event's properties.
                                                     map.on('click', 'states-layer', (e) => {
                                                         new mapboxgl.Popup()
-                                                        .setLngLat(e.lngLat)
-                                                        .setHTML(e.features[0].properties.DPTO_CNMBR)
-                                                        .addTo(map);
+                                                            .setLngLat(e.lngLat)
+                                                            .setHTML(e.features[0].properties.DPTO_CNMBR)
+                                                            .addTo(map);
                                                     });
- 
+
                                                     // Change the cursor to a pointer when
                                                     // the mouse is over the states layer.
                                                     map.on('mouseenter', 'states-layer', () => {
                                                         map.getCanvas().style.cursor = 'pointer';
                                                     });
-                                                    
+
                                                     // Change the cursor back to a pointer
                                                     // when it leaves the states layer.
                                                     map.on('mouseleave', 'states-layer', () => {
@@ -546,7 +560,8 @@
                                     <h6 class="m-0 font-weight-bold text-primary">¿Qué son los datos procesados?</h6>
                                 </div>
                                 <div class="card-body">
-                                    Los datos procesados son el resultado de tomar los datos del portal "Datos Abiertos" (datos originales) y realizar procesos de limpieza y calidad sobre ellos.
+                                    Los datos procesados son el resultado de tomar los datos del portal "Datos Abiertos"
+                                    (datos originales) y realizar procesos de limpieza y calidad sobre ellos.
                                 </div>
                             </div>
                         </div>
