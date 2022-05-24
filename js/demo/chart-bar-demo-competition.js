@@ -73,6 +73,7 @@ var myBarChart = new Chart(ctx, {
     },
     scales: {
       xAxes: [{
+      
         time: {
           unit: 'month'
         },
@@ -86,6 +87,10 @@ var myBarChart = new Chart(ctx, {
         maxBarThickness: 25,
       }],
       yAxes: [{
+              scaleLabel: {
+          display: true,
+          labelString: 'Cantidad de contratos'
+        },
         ticks: {
           min: 0,
           max: 60,
